@@ -1,10 +1,10 @@
 const fs = require('fs');
-const { resolve } = require('path');
+const { resolve, dirname } = require('path');
 
 const writeJSON = async (path, data) => {
   if (typeof data !== 'object') throw new Error('Invalid Data');
 
-  await createDirectoryIfNotExists(path);
+  await createDirectoryIfNotExists(dirname(path));
 
   fs.writeFileSync(resolve(path), JSON.stringify(data));
 
