@@ -23,6 +23,6 @@ const createDirectoryIfNotExists = (path) => {
 
 module.exports = {
   // Do not modify the names of the exports
-  writeJSON: writeJSON,
+  writeJSON,
   createDirectoryIfNotExists,
 };
